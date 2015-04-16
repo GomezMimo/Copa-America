@@ -97,7 +97,7 @@ public class Main extends javax.swing.JFrame {
             // Excepcion para cuando los campos estan vacios o cuando se llena
             // el campo de la cedula con campos diferentes a numeros
             try{
-                if(txtNombre.getText().trim().equals("") && txtCedula.getText().trim().equals("")){
+                if(txtNombre.getText().trim().equals("") || txtCedula.getText().trim().equals("")){
                     JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");                      
                 }else{
                  Long.parseLong(txtCedula.getText());    
