@@ -32,6 +32,9 @@ public class Main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(720, 540));
+        setMinimumSize(new java.awt.Dimension(720, 540));
         getContentPane().setLayout(null);
 
         jTextField1.setText("Nombre");
