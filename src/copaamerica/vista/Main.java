@@ -94,23 +94,32 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-
+            // Excepcion para cuando los campos estan vacios o cuando se llena
+            // el campo de la cedula con campos diferentes a numeros
+            try{     
+                Long.parseLong(txtCedula.getText()); 
+                if(txtNombre.getText().trim().equals("") && txtCedula.getText().trim().equals("")){
+                    JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");                      
+                }else{
+                 copaamerica.CopaAmerica.NOMBRE_USUARIO = txtNombre.getText();
+                 copaamerica.CopaAmerica.CEDULA_USUARIO = txtCedula.getText();        
+                 Container container = new Container();
+                 container.setVisible(true);
+                 dispose();                    
+                }    
+            }
+            catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null, "Dato erroneo en la cedula");
+            }   
         
-        if(txtNombre.getText().trim().equals("") || txtCedula.getText().trim().equals("")){
-            JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");            
-        }
+        
         //TODO: Validar cuando los campos esten vacios, cuando la cedula tenga letras y controlar con excepciones
         //
         //  Codificame aqui ;)
         //
         
         // Si todo sale bien, entonces hace esto 
-        copaamerica.CopaAmerica.NOMBRE_USUARIO = txtNombre.getText();
-        copaamerica.CopaAmerica.CEDULA_USUARIO = txtCedula.getText();
         
-        Container container = new Container();
-        container.setVisible(true);
-        dispose();
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
