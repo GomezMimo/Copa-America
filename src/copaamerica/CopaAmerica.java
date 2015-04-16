@@ -8,6 +8,6 @@ public class CopaAmerica {
     
     public static void main(String args[]){
         Main principal = new Main();
-        principal.setVisible(true);
+        principal.setVisible(true);        
     }    
 }
