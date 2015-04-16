@@ -49,7 +49,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNombre);
-        txtNombre.setBounds(528, 410, 140, 28);
+        txtNombre.setBounds(528, 410, 140, 22);
 
         txtCedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +57,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtCedula);
-        txtCedula.setBounds(530, 440, 140, 28);
+        txtCedula.setBounds(530, 440, 140, 22);
 
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnIngresar);
-        btnIngresar.setBounds(550, 470, 100, 29);
+        btnIngresar.setBounds(550, 470, 100, 25);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");

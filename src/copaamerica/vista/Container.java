@@ -16,6 +16,8 @@ public class Container extends javax.swing.JFrame {
      */
     public Container() {
         initComponents();
+        lblUsuario.setText(copaamerica.CopaAmerica.NOMBRE_USUARIO);
+        lblUsuario.setText(copaamerica.CopaAmerica.CEDULA_USUARIO);
     }
 
     /**
@@ -46,12 +48,14 @@ public class Container extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        lblCedula = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(new java.awt.FlowLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane1.setMaximumSize(new java.awt.Dimension(800, 600));
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(800, 600));
@@ -78,14 +82,14 @@ public class Container extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 926, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 995, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -159,12 +163,12 @@ public class Container extends javax.swing.JFrame {
                                 .addComponent(jLabel11)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel10)))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(45, 45, 45)
                     .addComponent(jLabel3)
-                    .addContainerGap(809, Short.MAX_VALUE)))
+                    .addContainerGap(878, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,12 +201,12 @@ public class Container extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(33, 33, 33)
                     .addComponent(jLabel3)
-                    .addContainerGap(593, Short.MAX_VALUE)))
+                    .addContainerGap(676, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Grupos", jPanel2);
@@ -211,11 +215,11 @@ public class Container extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
+            .addGap(0, 1019, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 655, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Estadios", jPanel3);
@@ -224,17 +228,25 @@ public class Container extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
+            .addGap(0, 1019, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 655, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Cobertura", jPanel4);
 
-        getContentPane().add(jTabbedPane1);
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, -1));
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion General");
+
+        lblCedula.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblCedula.setText("jLabel12");
+        getContentPane().add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
+
+        lblUsuario.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblUsuario.setText("jLabel12");
+        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -294,5 +306,7 @@ public class Container extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblCedula;
+    private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }
