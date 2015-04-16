@@ -18,6 +18,7 @@ public class Container extends javax.swing.JFrame {
         initComponents();
         lblUsuario.setText(copaamerica.CopaAmerica.NOMBRE_USUARIO);
         lblUsuario.setText(copaamerica.CopaAmerica.CEDULA_USUARIO);
+        
     }
 
     /**
@@ -242,11 +243,11 @@ public class Container extends javax.swing.JFrame {
 
         lblCedula.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblCedula.setText("jLabel12");
-        getContentPane().add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
+        getContentPane().add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 40, -1, -1));
 
         lblUsuario.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblUsuario.setText("jLabel12");
-        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, -1, -1));
+        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
