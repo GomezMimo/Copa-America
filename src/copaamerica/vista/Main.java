@@ -5,6 +5,8 @@
  */
 package copaamerica.vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author JuanGomez
@@ -27,40 +29,85 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtCedula = new javax.swing.JTextField();
+        btnIngresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(720, 540));
-        setMinimumSize(new java.awt.Dimension(720, 540));
+        setMaximumSize(new java.awt.Dimension(720, 560));
+        setMinimumSize(new java.awt.Dimension(720, 560));
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        jTextField1.setText("Nombre");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(528, 410, 140, 22);
-
-        jTextField2.setText("Cedula");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtNombreActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(528, 445, 140, 22);
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(528, 410, 140, 22);
+
+        txtCedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedulaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtCedula);
+        txtCedula.setBounds(530, 440, 140, 22);
+
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnIngresar);
+        btnIngresar.setBounds(550, 470, 100, 25);
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Nombre");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(460, 410, 70, 20);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Cédula");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(460, 440, 70, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copaamerica/vista/images/background.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 720, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtCedulaActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        
+        //TODO: Validar cuando los campos esten vacios, cuando la cedula tenga letras y controlar con excepciones
+        //
+        //  Codificame aqui ;)
+        //
+        
+        // Si todo sale bien, entonces hace esto 
+        copaamerica.CopaAmerica.NOMBRE_USUARIO = txtNombre.getText();
+        copaamerica.CopaAmerica.CEDULA_USUARIO = txtCedula.getText();
+        
+        Container container = new Container();
+        container.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,10 +143,16 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txtCedula;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
