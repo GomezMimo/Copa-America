@@ -96,15 +96,15 @@ public class Main extends javax.swing.JFrame {
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
             // Excepcion para cuando los campos estan vacios o cuando se llena
             // el campo de la cedula con campos diferentes a numeros
-            try{     
-                Long.parseLong(txtCedula.getText()); 
+            try{
                 if(txtNombre.getText().trim().equals("") && txtCedula.getText().trim().equals("")){
                     JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");                      
                 }else{
+                 Long.parseLong(txtCedula.getText());    
                  copaamerica.CopaAmerica.NOMBRE_USUARIO = txtNombre.getText();
                  copaamerica.CopaAmerica.CEDULA_USUARIO = txtCedula.getText();        
                  Container container = new Container();
-                 container.setVisible(true);
+                 container.setVisible(true);                 
                  dispose();                    
                 }    
             }
