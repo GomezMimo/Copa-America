@@ -49,7 +49,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNombre);
-        txtNombre.setBounds(528, 410, 140, 22);
+        txtNombre.setBounds(528, 410, 140, 28);
 
         txtCedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +57,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtCedula);
-        txtCedula.setBounds(530, 440, 140, 22);
+        txtCedula.setBounds(530, 440, 140, 28);
 
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnIngresar);
-        btnIngresar.setBounds(550, 470, 100, 25);
+        btnIngresar.setBounds(550, 470, 100, 29);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
@@ -94,7 +94,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+
         
+        if(txtNombre.getText().trim().equals("") || txtCedula.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");            
+        }
         //TODO: Validar cuando los campos esten vacios, cuando la cedula tenga letras y controlar con excepciones
         //
         //  Codificame aqui ;)
