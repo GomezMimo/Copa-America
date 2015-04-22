@@ -101,8 +101,8 @@ public class Main extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Por favor llena todos los campos");                      
                 }else{
                  Long.parseLong(txtCedula.getText());    
-                 copaamerica.CopaAmerica.NOMBRE_USUARIO = txtNombre.getText();
-                 copaamerica.CopaAmerica.CEDULA_USUARIO = txtCedula.getText();        
+                 copaamerica.CopaAmerica.nombre_usuario = txtNombre.getText();
+                 copaamerica.CopaAmerica.cedula_usuario = txtCedula.getText();        
                  Container container = new Container();
                  container.setVisible(true);                 
                  dispose();                    

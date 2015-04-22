@@ -3,8 +3,8 @@ import copaamerica.vista.Main;
 
 public class CopaAmerica {
     
-    public static String NOMBRE_USUARIO;
-    public static String CEDULA_USUARIO;
+    public static String nombre_usuario;
+    public static String cedula_usuario;
     
     public static void main(String args[]){
         Main principal = new Main();
